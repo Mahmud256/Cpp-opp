@@ -1,40 +1,42 @@
 #include<iostream>
 using namespace std;
-class Prime{
-public:
+class prime //class
+{
+private:
     int n,i,c=0;
-
-    void display1()
+public:
+    prime(int num)//constructor
     {
-        cout<<"Prime is: "<<n<<endl;
+        n = num;
     }
-
-    void display2()
+    void p()
     {
-        cout<<"Prime isn't: "<<n<<endl;
-    }
+        for(i=2; i<n; i++)
+        {
+            if(n%i==0)
+            {
+                c++;
+                break;
+            }
+        }
+        if(c==0)
+        {
+            cout<<"Prime"<<endl;
+        }
 
+        else
+        {
+            cout<<"prime is not"<<endl;
+        }
+
+    }
 };
 int main()
 {
-    Prime p;
-    cin>>p.n;
-    for(p.i=2; p.i<p.n; p.i++)
-    {
-        if(p.n%p.i==0)
-        {
-            p.c++;
-            break;
-        }
-    }
-    if(p.c==0)
-    {
-        p.display1();
-    }
-    else
-    {
-        p.display2();
-    }
+    int num;
+    cin>>num;
+    prime obj(num);
+    obj.p();
 
-        return 0;
+    return 0;
 }
