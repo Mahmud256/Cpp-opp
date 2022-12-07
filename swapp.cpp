@@ -20,7 +20,7 @@ void Swapping::set_data()
     cout << "Before swapping." << endl;
     cout << "a = " << a << ", b = " << b << endl;
 
-	temp = a;
+    temp = a;
     a = b;
     b = temp;
 }
